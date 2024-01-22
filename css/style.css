@@ -1,3 +1,229 @@
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Light.woff2") format("woff2"), url("../fonts/Causten-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Regular.woff2") format("woff2"), url("../fonts/Causten-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Medium.woff2") format("woff2"), url("../fonts/Causten-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Semi-Bold.woff2") format("woff2"), url("../fonts/Causten-Semi-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Bold.woff2") format("woff2"), url("../fonts/Causten-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-55Medium.woff2") format("woff2"), url("../fonts/CoreSansC-55Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-65Bold.woff2") format("woff2"), url("../fonts/CoreSansC-65Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"), url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class*=" _icon-"]::before {
+  display: inline-block;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-star-active:before {
+  content: "\e914";
+}
+
+._icon-star:before {
+  content: "\e91e";
+}
+
+._icon-lock:before {
+  content: "\e91f";
+}
+
+._icon-a-down:before {
+  content: "\e900";
+}
+
+._icon-a-left:before {
+  content: "\e901";
+}
+
+._icon-a-right:before {
+  content: "\e902";
+}
+
+._icon-a-top:before {
+  content: "\e903";
+}
+
+._icon-bags:before {
+  content: "\e904";
+}
+
+._icon-ch-down:before {
+  content: "\e905";
+}
+
+._icon-ch-left:before {
+  content: "\e906";
+}
+
+._icon-ch-right:before {
+  content: "\e907";
+}
+
+._icon-ch-up:before {
+  content: "\e908";
+}
+
+._icon-checkbox:before {
+  content: "\e909";
+}
+
+._icon-close:before {
+  content: "\e90a";
+}
+
+._icon-credit-card:before {
+  content: "\e90b";
+}
+
+._icon-delete:before {
+  content: "\e90c";
+}
+
+._icon-exit:before {
+  content: "\e90d";
+}
+
+._icon-eye-border:before {
+  content: "\e90e";
+}
+
+._icon-eye-hide:before {
+  content: "\e90f";
+}
+
+._icon-eye:before {
+  content: "\e910";
+}
+
+._icon-filtter:before {
+  content: "\e911";
+}
+
+._icon-free-shiping:before {
+  content: "\e912";
+}
+
+._icon-heart:before {
+  content: "\e913";
+}
+
+._icon-message:before {
+  content: "\e915";
+}
+
+._icon-play:before {
+  content: "\e916";
+}
+
+._icon-s-facebook:before {
+  content: "\e917";
+}
+
+._icon-s-instagram:before {
+  content: "\e918";
+}
+
+._icon-s-linkedin:before {
+  content: "\e919";
+}
+
+._icon-s-twitter:before {
+  content: "\e91a";
+}
+
+._icon-search:before {
+  content: "\e91b";
+}
+
+._icon-shopping-cart:before {
+  content: "\e91c";
+}
+
+._icon-size-fit:before {
+  content: "\e91d";
+}
+
+._icon-truck:before {
+  content: "\e920";
+}
+
+._icon-user:before {
+  content: "\e921";
+}
+
 *,
 *::before,
 *::after {
@@ -70,6 +296,10 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+body {
+  font-family: "Causten";
 }
 
 .wrapper {

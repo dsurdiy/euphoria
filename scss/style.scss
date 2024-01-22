@@ -12,8 +12,13 @@ $containerPadding: 30;
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
 
+// Кольори
+$mainColor: #807d7e;
+
 // Шрифти
 @import "fonts";
+// Іконки
+@import "icons";
 // Обнулення
 @import "reset";
 // Компоненти
@@ -22,6 +27,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 @import "functions";
 
 body {
+	font-family: "Causten";
 }
 
 .wrapper {

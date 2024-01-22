@@ -1,5 +1,3 @@
-@use "sass:math";
-
 @function percent($num1, $num2) {
 	$rez: math.div($num1, $num2) * 100%;
 	@return $rez;

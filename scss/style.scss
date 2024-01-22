@@ -1,11 +1,12 @@
 @use "sass:math";
 
+// Налаштування адаптивної властивості (функції)
 // Мінімальна ширина сторінки
 $minWidth: 320;
 // Ширина полотна
-$maxWidth: 1920;
+$maxWidth: 1440;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1240;
 // Загальний відступ у контейнера
 // (30 = по 15рх ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -14,7 +15,12 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Кольори
 $mainColor: #807d7e;
+$darkColor: #3c4242;
+$purpleColor: #8a33fd;
+$litecolor: #f6f6f6;
 
+// Функції
+@import "functions";
 // Шрифти
 @import "fonts";
 // Іконки
@@ -23,13 +29,10 @@ $mainColor: #807d7e;
 @import "reset";
 // Компоненти
 @import "common";
-// Функції
-@import "functions";
 
 body {
 	font-family: "Causten";
 }
-
 .wrapper {
 	overflow: clip;
 	display: flex;
@@ -38,4 +41,10 @@ body {
 	main {
 		flex-grow: 1;
 	}
+}
+[class*="__container"] {
+	max-width: toRem(1270);
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
 }

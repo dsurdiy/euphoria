@@ -23,6 +23,7 @@
 // Product Preview Cart
 
 .item-product {
+  position: relative;
   display: grid;
   gap: toRem(30);
   &--category {
@@ -47,12 +48,14 @@
   &__body {
     display: grid;
     grid-template: auto auto / 1fr auto;
-    gap: toRem(5);
+    row-gap: toRem(5);
+    column-gap: toRem(35);
   }
   // .item-product__title
   &__title {
     font-weight: 600;
     color: $darkColor;
+    min-width: 0;
     .item-product--category & {
       font-size: toRem(17);
       font-weight: 700;
@@ -60,6 +63,16 @@
   }
   // .item-product__link-title
   &__link-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   // .item-product__label
   &__label {
@@ -77,6 +90,13 @@
   &__link {
     display: flex;
     align-items: center;
+    font-size: toRem(24);
+    transition: color 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $mainColor;
+      }
+    }
   }
   // .item-product__price
   &__price {
@@ -87,5 +107,81 @@
     font-size: toRem(14);
     font-weight: 700;
     color: $darkColor;
+  }
+  // .item-product__favourite
+  &__favourite {
+    position: absolute;
+    top: toRem(26);
+    right: toRem(20);
+    width: toRem(32);
+    height: toRem(32);
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      transition: color 0.3s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+// Button
+
+.button {
+  background-color: $purpleColor;
+  padding: toRem(16) toRem(20);
+  font-size: toRem(18);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2222222;
+  text-align: center;
+  border-radius: toRem(8);
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #6620c1;
+      box-shadow: 0 toRem(3) toRem(4) 0 rgba(0, 0, 0, 0.1);
+    }
+    &:focus {
+      background-color: #6620c1;
+    }
+  }
+  &:disabled {
+    background-color: #eaeaea;
+    color: #807d7e;
+  }
+  &--border {
+    color: $darkColor;
+    background-color: #fff;
+    border: toRem(1) solid #bebcbd;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+        background-color: #fff;
+        box-shadow: none;
+      }
+      &:focus {
+        color: $purpleColor;
+        border: toRem(1) solid $purpleColor;
+      }
+    }
+  }
+  &--white {
+    background-color: #fff;
+    color: $darkColor;
+    &:hover {
+      color: $purpleColor;
+      background-color: rgba(102, 32, 193, 0.03);
+    }
+    &:focus {
+      color: $purpleColor;
+      background-color: rgba(102, 32, 193, 0.03);
+    }
   }
 }

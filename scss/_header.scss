@@ -1,0 +1,148 @@
+.header {
+   border-bottom: toRem(1) solid #bebcbd;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff;
+   // .header__container
+   &__container {
+      padding: toRem(10) toRem(0);
+      display: grid;
+      // grid-template-columns: repeat(4, auto);
+      grid-template-columns: auto 1fr 21.532258% auto;
+      min-height: toRem(108);
+      justify-content: space-between;
+      align-items: center;
+      @include adaptiveValue("column-gap", 76, 12, 0, $containerWidth, 991.98);
+   }
+   // .header__logo
+   &__logo {
+   }
+   // .header__menu
+   &__menu {
+   }
+   // .header__form
+   &__form {
+   }
+   // .header__action
+   &__action {
+   }
+}
+
+.menu {
+   // .menu__icon
+   &__icon {
+   }
+   // .menu__body
+   &__body {
+   }
+   // .menu__list
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: toRem(4);
+      @include adaptiveValue("column-gap", 40, 10);
+   }
+   // .menu__item
+   &__item {
+   }
+   // .menu__link
+   &__link {
+      font-size: toRem(22);
+      font-weight: 500;
+      color: $mainColor;
+      position: relative;
+      &--active {
+         font-weight: 700;
+         color: $darkColor;
+      }
+      &::before {
+         content: "";
+         height: toRem(3);
+         background-color: $purpleColor;
+         position: absolute;
+         top: 100%;
+         left: 50%;
+         width: 0;
+         border-radius: toRem(2);
+         margin-top: toRem(2);
+         transition: all 0.3s;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            &::before {
+               width: 100%;
+               left: 0;
+            }
+         }
+      }
+   }
+}
+
+.search-form {
+   background-color: #f6f6f6;
+   position: relative;
+   padding-left: toRem(44);
+   border-radius: toRem(8);
+   // .search-form__input
+   &__input {
+      height: toRem(44);
+      padding-right: toRem(15);
+      color: $darkColor;
+      &::placeholder {
+         color: $mainColor;
+         transition: opacity 0.3s;
+      }
+      &:focus {
+         &::placeholder {
+            opacity: 0;
+         }
+      }
+   }
+   // .search-form__button
+   &__button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: toRem(44);
+      height: toRem(44);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $purpleColor;
+         }
+      }
+   }
+}
+
+.action-header {
+   display: flex;
+   gap: toRem(12);
+   // .action-header__item
+   &__item {
+      width: toRem(44);
+      height: toRem(44);
+      border-radius: toRem(8);
+      background-color: #f6f6f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $purpleColor;
+            color: #fff;
+         }
+      }
+   }
+}
+
+.icon-menu {
+   display: none;
+}

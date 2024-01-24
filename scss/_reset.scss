@@ -43,10 +43,12 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
-}
-button {
 	color: inherit;
 	background-color: transparent;
+}
+input,
+textarea {
+	width: 100%;
 }
 button,
 select,

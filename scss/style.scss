@@ -29,6 +29,8 @@ $litecolor: #f6f6f6;
 @import "reset";
 // Компоненти
 @import "common";
+@import "header";
+@import "footer";
 
 body {
 	font-family: "Causten";

@@ -8,32 +8,89 @@
    // .header__container
    &__container {
       padding: toRem(10) toRem(0);
-      display: grid;
-      // grid-template-columns: repeat(4, auto);
-      grid-template-columns: auto 1fr 21.532258% auto;
-      min-height: toRem(108);
+      display: flex;
+      // display: grid;
+      // grid-template-columns: auto 1fr 21.532258% auto;
+      @include adaptiveValue("min-height", 108, 65);
       justify-content: space-between;
       align-items: center;
       @include adaptiveValue("column-gap", 76, 12, 0, $containerWidth, 991.98);
+      // @media (max-width: toEm(767.98)) {
+      //    grid-template-columns: auto auto 1fr auto;
+      // }
+      // @media (max-width: toEm(540)) {
+      //    grid-template-columns: auto 1fr auto;
+      // }
    }
    // .header__logo
    &__logo {
+      position: relative;
+      z-index: 4;
    }
    // .header__menu
    &__menu {
+      @media (max-width: toEm(767.98)) {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: -100%;
+         z-index: 2;
+         overflow: auto;
+         background-color: #fff;
+         transition: left 0.3s;
+         padding: toRem(0) toRem(15) toRem(30) toRem(15);
+         @include adaptiveValue("padding-top", 138, 95, 3, 768, 320);
+         &::before {
+            content: "";
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            @include adaptiveValue("height", 109, 66);
+            background-color: #fff;
+            border-bottom: toRem(1) solid #bebcbd;
+            transition: left 0.3s;
+         }
+         .menu-open & {
+            left: 0;
+            &::before {
+               left: 0;
+            }
+         }
+      }
+      @media (max-width: toEm(540)) {
+         padding-bottom: toRem(105);
+      }
    }
-   // .header__form
-   &__form {
+   // .header__search
+   &__search {
+      position: relative;
+      z-index: 4;
+      flex-basis: 21.532258%;
+      @media (max-width: toEm(767.98)) {
+         flex-grow: 1;
+      }
    }
    // .header__action
    &__action {
+      position: relative;
+      z-index: 4;
+      @media (max-width: toEm(540)) {
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         padding: toRem(15);
+         background-color: #fff;
+         border-top: toRem(1) solid #bebcbd;
+      }
    }
 }
 
 .menu {
-   // .menu__icon
-   &__icon {
-   }
+   flex-grow: 1;
    // .menu__body
    &__body {
    }
@@ -44,7 +101,11 @@
       justify-content: center;
       flex-wrap: wrap;
       row-gap: toRem(4);
-      @include adaptiveValue("column-gap", 40, 10);
+      @include adaptiveValue("column-gap", 40, 10, 0, $containerWidth, 767.98);
+      @media (max-width: toEm(767.98)) {
+         flex-direction: column;
+         row-gap: toRem(20);
+      }
    }
    // .menu__item
    &__item {
@@ -78,6 +139,9 @@
                left: 0;
             }
          }
+      }
+      @media (max-width: toEm(767.98)) {
+         font-size: toRem(28);
       }
    }
 }
@@ -122,7 +186,9 @@
 }
 
 .action-header {
-   display: flex;
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: 1fr;
    gap: toRem(12);
    // .action-header__item
    &__item {
@@ -140,9 +206,54 @@
             color: #fff;
          }
       }
+      @media (max-width: toEm(540)) {
+         width: auto;
+      }
    }
 }
 
 .icon-menu {
    display: none;
+   @media (max-width: toEm(767.98)) {
+      display: block;
+      flex: 0 0 30px;
+      width: 30px;
+      height: 18px;
+      position: relative;
+      z-index: 2;
+      span,
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         background-color: $darkColor;
+         transition: all 0.4s;
+      }
+      span {
+         top: 50%;
+         margin-top: -1px;
+         .menu-open & {
+            transform: scale(0);
+         }
+      }
+      &::before {
+         top: 0;
+         .menu-open & {
+            top: 50%;
+            transform: rotate(45deg);
+            margin-top: -1px;
+         }
+      }
+      &::after {
+         bottom: 0;
+         .menu-open & {
+            bottom: 50%;
+            transform: rotate(-45deg);
+            margin-bottom: -1px;
+         }
+      }
+   }
 }

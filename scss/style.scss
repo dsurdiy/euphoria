@@ -34,12 +34,20 @@ $litecolor: #f6f6f6;
 
 body {
 	font-family: "Causten";
+	&.menu-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
 }
 .wrapper {
 	overflow: clip;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	@media (max-width: toEm(540)) {
+		padding-bottom: toRem(75);
+	}
 	main {
 		flex-grow: 1;
 	}

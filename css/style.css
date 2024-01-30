@@ -75,7 +75,7 @@
   font-style: normal;
   font-display: swap;
 }
-.slide-hero__body, .title {
+.deals__content, .slide-hero__body, .title {
   font-family: "CoreSans";
 }
 
@@ -2011,6 +2011,238 @@ textarea {
 .slide-hero__image--top-right {
   -o-object-position: 76% top;
      object-position: 76% top;
+}
+
+@media (min-width: 79.375em) {
+  .deals {
+    padding-top: 8.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-top: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem )) {
+    .deals {
+      padding-top: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem );
+    }
+  }
+  @supports not (padding-top: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem )) {
+    .deals {
+      padding-top: calc(2.5rem + 5.625 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals {
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 79.375em) {
+  .deals {
+    padding-bottom: 8.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-bottom: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem )) {
+    .deals {
+      padding-bottom: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 2.5rem , 0.6052631579rem  +  9.4736842105vw , 8.125rem )) {
+    .deals {
+      padding-bottom: calc(2.5rem + 5.625 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals {
+    padding-bottom: 2.5rem;
+  }
+}
+.deals__container {
+  display: grid;
+  gap: 1.875rem;
+}
+@media (min-width: 79.375em) {
+  .deals__container {
+    gap: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (gap: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem )) {
+    .deals__container {
+      gap: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem );
+    }
+  }
+  @supports not (gap: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem )) {
+    .deals__container {
+      gap: calc(1.25rem + 0.625 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals__container {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 47.99875em) {
+  .deals__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.deals__item {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.4);
+}
+.deals__content {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 604/356;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+@media (min-width: 79.375em) {
+  .deals__content {
+    padding: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem )) {
+    .deals__content {
+      padding: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem );
+    }
+  }
+  @supports not (padding: clamp( 1.25rem , 1.0394736842rem  +  1.0526315789vw , 1.875rem )) {
+    .deals__content {
+      padding: calc(1.25rem + 0.625 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals__content {
+    padding: 1.25rem;
+  }
+}
+.deals__content > * {
+  margin-bottom: 0.625rem;
+}
+.deals__content > *:last-child {
+  margin-bottom: 0;
+}
+.deals__label {
+  font-weight: 800;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+.deals__title {
+  font-weight: 800;
+}
+@media (min-width: 79.375em) {
+  .deals__title {
+    font-size: 2.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (font-size: clamp( 1.375rem , 1.1223684211rem  +  1.2631578947vw , 2.125rem )) {
+    .deals__title {
+      font-size: clamp( 1.375rem , 1.1223684211rem  +  1.2631578947vw , 2.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.375rem , 1.1223684211rem  +  1.2631578947vw , 2.125rem )) {
+    .deals__title {
+      font-size: calc(1.375rem + 0.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals__title {
+    font-size: 1.375rem;
+  }
+}
+.deals__sale {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (min-width: 79.375em) {
+  .deals__sale {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem )) {
+    .deals__sale {
+      margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem )) {
+    .deals__sale {
+      margin-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals__sale {
+    margin-bottom: 1.25rem;
+  }
+}
+.deals__link {
+  font-weight: 800;
+  border-bottom: 0.0625rem solid;
+  -webkit-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s;
+}
+@media (min-width: 79.375em) {
+  .deals__link {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (font-size: clamp( 1rem , 0.9157894737rem  +  0.4210526316vw , 1.25rem )) {
+    .deals__link {
+      font-size: clamp( 1rem , 0.9157894737rem  +  0.4210526316vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.9157894737rem  +  0.4210526316vw , 1.25rem )) {
+    .deals__link {
+      font-size: calc(1rem + 0.25 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .deals__link {
+    font-size: 1rem;
+  }
+}
+@media (any-hover: hover) {
+  .deals__link:hover {
+    border-bottom: 0.0625rem solid transparent;
+  }
+}
+.deals__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top right;
+     object-position: top right;
 }
 
 body {

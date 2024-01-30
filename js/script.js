@@ -106,3 +106,28 @@ let slideUp = (target, duration = 500) => {
 let slideToggle = (target, duration = 500) => {
    target.hidden ? slideDown(target, duration) : slideUp(target, duration);
 }
+
+
+// Слайдери
+
+const heroSlider = document.querySelector(".hero");
+if (heroSlider) {
+   const swiper = new Swiper('.hero', {
+      // Optional parameters
+      loop: true,
+      autoHeight: true,
+      speed: 800,
+      parallax: true,
+
+      // If we need pagination
+      pagination: {
+         el: '.hero__pagination',
+         clickable: true,
+      },
+      // Navigation arrows
+      navigation: {
+         nextEl: '.hero__arrow--next',
+         prevEl: '.hero__arrow--prev',
+      },
+   });
+}

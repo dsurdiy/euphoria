@@ -134,6 +134,7 @@
 // Button
 
 .button {
+  font-family: "Causten";
   background-color: $purpleColor;
   padding: toRem(16) toRem(20);
   font-size: toRem(18);
@@ -176,12 +177,12 @@
     background-color: #fff;
     color: $darkColor;
     &:hover {
-      color: $purpleColor;
-      background-color: rgba(102, 32, 193, 0.03);
+      color: #fff;
+      background-color: $purpleColor;
     }
     &:focus {
-      color: $purpleColor;
-      background-color: rgba(102, 32, 193, 0.03);
+      color: #fff;
+      background-color: $purpleColor;
     }
   }
 }

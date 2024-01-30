@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<title>HomePage</title>
 </head>
@@ -47,7 +48,53 @@
 			</div>
 		</header>
 		<main class="page">
-
+			<section class="page__hero hero swiper">
+				<!-- Additional required wrapper -->
+				<div class="hero__wrapper swiper-wrapper">
+					<!-- Slides -->
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__container">
+							<div class="slide-hero__body">
+								<div class="slide-hero__label" data-swiper-parallax="-100">T-shirt / Tops</div>
+								<h2 class="slide-hero__title" data-swiper-parallax="-150">Summer <br> Value Pack</h2>
+								<div class="slide-hero__label" data-swiper-parallax="-100">cool / colorful / comfy</div>
+								<a href="#" class="slide-hero__button button button--white" data-swiper-parallax="-100">Shop
+									Now</a>
+							</div>
+						</div>
+						<img class="slide-hero__image slide-hero__image--top-right" src="img/hero/slide-01.jpeg" alt="Image">
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__container">
+							<div class="slide-hero__body">
+								<div class="slide-hero__label" data-swiper-parallax="-100">T-shirt / Tops</div>
+								<h2 class="slide-hero__title" data-swiper-parallax="-150">Some Other <br> Product</h2>
+								<div class="slide-hero__label" data-swiper-parallax="-100">cool / colorful / comfy</div>
+								<a href="#" class="slide-hero__button button button--white" data-swiper-parallax="-100">Shop
+									Now</a>
+							</div>
+						</div>
+						<img class="slide-hero__image slide-hero__image--top-right" src="img/hero/slide-01.jpeg" alt="Image">
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__container">
+							<div class="slide-hero__body">
+								<div class="slide-hero__label" data-swiper-parallax="-100">T-shirt / Tops</div>
+								<h2 class="slide-hero__title" data-swiper-parallax="-150">Some Other <br> Product</h2>
+								<div class="slide-hero__label" data-swiper-parallax="-100">cool / colorful / comfy</div>
+								<a href="#" class="slide-hero__button button button--white" data-swiper-parallax="-100">Shop
+									Now</a>
+							</div>
+						</div>
+						<img class="slide-hero__image slide-hero__image--top-right" src="img/hero/slide-01.jpeg" alt="Image">
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="hero__pagination"></div>
+				<!-- If we need navigation buttons -->
+				<button class="hero__arrow hero__arrow--prev _icon-ch-left"></button>
+				<button class="hero__arrow hero__arrow--next _icon-ch-right"></button>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -174,6 +221,8 @@
 			</div>
 		</footer>
 	</div>
+	<!-- Підключення слайдеру Swiper -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<!-- Підключення JS-файлу з кодом -->
 	<script src="js/script.js"></script>
 </body>

@@ -31,6 +31,8 @@ $litecolor: #f6f6f6;
 @import "common";
 @import "header";
 @import "footer";
+// Сторінки
+@import "home";
 
 body {
 	font-family: "Causten";
@@ -61,4 +63,7 @@ body {
 }
 
 .page {
+	// .page__hero
+	&__hero {
+	}
 }

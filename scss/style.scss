@@ -65,8 +65,14 @@ body {
 .page {
 	// .page__hero
 	&__hero {
+		@include adaptiveValue("margin-bottom", 130, 40);
 	}
 	// .page__deals
 	&__deals {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
+	// .page__new
+	&__new {
+		@include adaptiveValue("margin-bottom", 95, 40);
 	}
 }

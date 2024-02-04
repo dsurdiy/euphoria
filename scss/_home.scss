@@ -561,3 +561,21 @@
       }
    }
 }
+
+// =============================================================================================
+
+.categories {
+   // .categories__container
+   &__container {
+   }
+   // .categories__title
+   &__title {
+   }
+   // .categories__items
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+      gap: toRem(30);
+      @include adaptiveValue("column-gap", 50, 20);
+   }
+}

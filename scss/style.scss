@@ -81,6 +81,10 @@ body {
 	&__shop-now {
 		@include adaptiveValue("margin-bottom", 100, 40);
 	}
+	// .page__categories
+	&__categories {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
 }
 
 // Сторінки

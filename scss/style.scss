@@ -31,8 +31,6 @@ $litecolor: #f6f6f6;
 @import "common";
 @import "header";
 @import "footer";
-// Сторінки
-@import "home";
 
 body {
 	font-family: "Causten";
@@ -75,4 +73,15 @@ body {
 	&__new {
 		@include adaptiveValue("margin-bottom", 95, 40);
 	}
+	// .page__sale
+	&__sale {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
+	// .page__shop-now
+	&__shop-now {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
 }
+
+// Сторінки
+@import "home";

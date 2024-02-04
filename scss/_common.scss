@@ -18,6 +18,11 @@
     border-radius: toRem(10);
     background-color: $purpleColor;
   }
+  &--margin {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 20);
+    }
+  }
 }
 
 // Product Preview Cart
@@ -159,7 +164,7 @@
   }
   &--border {
     color: $darkColor;
-    background-color: #fff;
+    background-color: transparent;
     border: toRem(1) solid #bebcbd;
     @media (any-hover: hover) {
       &:hover {

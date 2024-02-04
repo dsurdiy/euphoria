@@ -236,9 +236,6 @@
    }
    // .new__title
    &__title {
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 70, 20);
-      }
    }
    // .new__slider
    &__slider {
@@ -317,6 +314,250 @@
          &:hover {
             text-decoration: underline;
          }
+      }
+   }
+}
+
+// =============================================================================================
+
+.sale {
+   // .sale__container
+   &__container {
+   }
+   // .sale__title
+   &__title {
+   }
+   // .sale__items
+   &__items {
+      /*
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+      gap: toRem(20);
+      align-items: stretch;
+      */
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: toRem(20);
+      margin: 0 toRem(-10);
+   }
+   // .sale__column
+   &__column {
+      flex-grow: 1;
+      flex-basis: 33.33333%;
+      min-width: toRem(280);
+      min-height: toRem(393);
+      padding: 0 toRem(10);
+      @media (min-width: toEm(1240)) {
+         max-width: 50%;
+      }
+   }
+   // .sale__item
+   &__item {
+      min-height: 100%;
+   }
+}
+.item-sale {
+   position: relative;
+   display: flex;
+   color: #fff;
+   border-radius: toRem(12);
+   overflow: hidden;
+   &--dark {
+      color: $darkColor;
+   }
+   &--right {
+      justify-content: flex-end;
+   }
+   // .item-sale__body
+   &__body {
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+      @include adaptiveValue("padding", 40, 20);
+      > * {
+         margin-bottom: toRem(9);
+         &:last-child {
+            margin-bottom: toRem(0);
+         }
+      }
+      .item-sale--text-right & {
+         align-items: flex-end;
+         text-align: right;
+      }
+   }
+   // .item-sale__limited
+   &__limited {
+      background-color: $darkColor;
+      border-radius: toRem(4);
+      padding: toRem(10) toRem(16);
+      font-weight: 700;
+      font-size: toRem(12);
+      text-align: center;
+      margin-bottom: toRem(28);
+   }
+   // .item-sale__title
+   &__title {
+      @extend %CS;
+      font-size: toRem(28);
+      @include adaptiveValue("font-size", 28, 24);
+      line-height: 135.714286%; /* 38/28 */
+      letter-spacing: toRem(1);
+      font-weight: 700;
+   }
+   // .item-sale__link-title
+   &__link-title {
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+   // .item-sale__label
+   &__label {
+      font-size: toRem(14);
+      font-weight: 600;
+      line-height: 121.428571%; /* 17/14 */
+   }
+   // .item-sale__info
+   &__info {
+      font-size: toRem(18);
+      font-weight: 700;
+      line-height: 122.222222%; /* 22/18 */
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+      }
+   }
+   // .item-sale__arrow
+   &__arrow {
+      display: inline-flex;
+      flex-direction: column;
+      &::before {
+         align-self: center;
+         font-size: toRem(40);
+         margin-bottom: toRem(40);
+      }
+   }
+   // .item-sale__button
+   &__button {
+      border: toRem(1) solid #fff;
+      padding: toRem(9) toRem(25);
+      font-size: toRem(12);
+      line-height: 116.666667%; /* 14/12 */
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      border-radius: toRem(4);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #fff;
+            color: $darkColor;
+         }
+      }
+      .item-sale--dark & {
+         border: toRem(1) solid $darkColor;
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $darkColor;
+               color: #fff;
+            }
+         }
+      }
+   }
+   // .item-sale__image
+   &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: top;
+   }
+}
+
+// =============================================================================================
+
+.shop-now {
+   // .shop-now__container
+   &__container {
+      display: grid;
+      @media (min-width: toEm(991.98)) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: toEm(479.98)) {
+         padding: 0;
+      }
+   }
+   // .shop-now__content
+   &__content {
+      color: #fff;
+      border-radius: toRem(15) 0 0 toRem(15);
+      overflow: hidden;
+      background: url("../img/shop-now/bg.jpeg") center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      @include adaptiveValue("padding-left", 74, 15);
+      @include adaptiveValue("padding-right", 74, 15);
+      @include adaptiveValue("padding-top", 74, 25);
+      @include adaptiveValue("padding-bottom", 74, 25);
+      > * {
+         @include adaptiveValue("margin-bottom", 30, 15);
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+      @media (max-width: toEm(991.98)) {
+         border-radius: toRem(15) toRem(15) 0 0;
+      }
+      @media (max-width: toEm(479.98)) {
+         border-radius: 0;
+      }
+   }
+   // .shop-now__title
+   &__title {
+      @extend %CS;
+      @include adaptiveValue("font-size", 34, 28);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 147.058824%; /* 50/34 */
+   }
+   // .shop-now__texe
+   &__text {
+      font-weight: 300;
+      line-height: 130%;
+      @include adaptiveValue("font-size", 20, 16);
+      @include adaptiveValue("margin-bottom", 50, 15);
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(15);
+         }
+      }
+   }
+   // .shop-now__button
+   &__button {
+      min-width: toRem(170);
+      @media (max-width: toEm(479.98)) {
+         width: 100%;
+      }
+   }
+   // .shop-now__image
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 toRem(15) toRem(15) 0;
+      @media (max-width: toEm(991.98)) {
+         border-radius: 0 0 toRem(15) toRem(15);
+      }
+      @media (max-width: toEm(479.98)) {
+         border-radius: 0;
       }
    }
 }

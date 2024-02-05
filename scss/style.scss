@@ -85,6 +85,10 @@ body {
 	&__categories {
 		@include adaptiveValue("margin-bottom", 100, 40);
 	}
+	// .page__top-brands
+	&__top-brands {
+		@include adaptiveValue("margin-bottom", 77, 40);
+	}
 }
 
 // Сторінки

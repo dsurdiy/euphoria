@@ -89,6 +89,10 @@ body {
 	&__products {
 		@include adaptiveValue("margin-bottom", 100, 40);
 	}
+	// .page__reviews
+	&__reviews {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
 }
 
 // Сторінки

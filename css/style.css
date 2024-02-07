@@ -1831,6 +1831,28 @@ body.menu-open {
     margin-bottom: 2.5rem;
   }
 }
+@media (min-width: 79.375em) {
+  .page__reviews {
+    margin-bottom: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (margin-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
+    .page__reviews {
+      margin-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
+    .page__reviews {
+      margin-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .page__reviews {
+    margin-bottom: 2.5rem;
+  }
+}
 
 .hero {
   position: relative;
@@ -3260,4 +3282,78 @@ body.menu-open {
        -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
   }
+}
+
+@media (max-width: 29.99875em) {
+  .reviews__slider {
+    margin-right: -0.9375rem;
+  }
+}
+.reviews__pages.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.25rem;
+  padding-top: 1.25rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.reviews__pages.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  margin: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.5rem;
+          flex: 0 0 0.5rem;
+  height: 0.5rem;
+  background-color: #bebcbd;
+  opacity: 0.3;
+}
+.reviews__pages.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+  background-color: #3c4242;
+  opacity: 1;
+}
+
+.slide-review {
+  border: 0.0625rem solid #bebcbd;
+  border-radius: 0.625rem;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  gap: 1.25rem;
+  padding: 1.4375rem;
+  height: auto;
+}
+.slide-review__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.slide-review__avatar {
+  aspect-ratio: 1/1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3.625rem;
+          flex: 0 0 3.625rem;
+  width: 3.625rem;
+}
+.slide-review__title {
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: #3c4242;
+}
+.slide-review__text {
+  line-height: 120%;
+}
+.slide-review__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
 }

@@ -170,3 +170,36 @@ if (newSlider) {
       },
    });
 }
+
+const reviewsSlider = document.querySelector(".reviews");
+if (reviewsSlider) {
+   new Swiper('.reviews__slider', {
+      // Optional parameters
+      loop: true,
+      speed: 800,
+      spaceBetween: 23,
+      slidesPerView: 3,
+
+      // If we need pagination
+      pagination: {
+         el: '.reviews__pages',
+         clickable: true,
+      },
+
+      // Responsive breakpoints
+      breakpoints: {
+         320: {
+            slidesPerView: 1.3,
+            spaceBetween: 15
+         },
+         480: {
+            slidesPerView: 2,
+            spaceBetween: 15
+         },
+         991: {
+            slidesPerView: 3,
+            spaceBetween: 23
+         }
+      },
+   });
+}

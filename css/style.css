@@ -543,6 +543,71 @@ textarea {
   background-color: #8a33fd;
 }
 
+.rating {
+  display: inline-block;
+}
+.rating__items {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.4375rem;
+  height: 1.25rem;
+}
+@media (any-hover: hover) {
+  .rating--set .rating__items:hover .rating__item {
+    background: url("../img/icons/star-active.svg") 0 0/1.25rem no-repeat;
+  }
+}
+.rating__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.25rem;
+          flex: 0 0 1.25rem;
+  width: 1.25rem;
+  position: relative;
+  background: url("../img/icons/star.svg") 0 0/1.25rem no-repeat;
+}
+.rating__item.active {
+  background: url("../img/icons/star-active.svg") 0 0/1.25rem no-repeat;
+}
+.rating__item span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1.25rem;
+  background: url("../img/icons/star-active.svg") 0 0/1.25rem no-repeat;
+}
+.rating__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.4375rem;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+@media (any-hover: hover) {
+  .rating--set .rating__item:hover ~ .rating__item {
+    background: url("../img/icons/star.svg") 0 0/1.25rem no-repeat;
+  }
+  .rating--set .rating__item:hover span {
+    display: none;
+  }
+}
+.rating__input {
+  aspect-ratio: 1/1;
+  width: 100%;
+  opacity: 0;
+}
+.rating--set .rating__input {
+  cursor: pointer;
+}
+
 .header {
   border-bottom: 0.0625rem solid #bebcbd;
   position: sticky;
@@ -3359,6 +3424,8 @@ body.menu-open {
       -ms-flex: 0 0 3.625rem;
           flex: 0 0 3.625rem;
   width: 3.625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .slide-review__title {
   font-weight: 500;

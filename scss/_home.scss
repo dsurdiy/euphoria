@@ -721,6 +721,7 @@
       aspect-ratio: 1 / 1;
       flex: 0 0 toRem(58);
       width: toRem(58);
+      object-fit: cover;
    }
    // .slide-review__rating
    &__rating {

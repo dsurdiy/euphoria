@@ -191,3 +191,75 @@
     }
   }
 }
+
+// Rating
+
+.rating {
+  display: inline-block;
+  // .rating__items
+  &__items {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: toRem(7);
+    height: toRem(20);
+    .rating--set & {
+      @media (any-hover: hover) {
+        &:hover {
+          .rating__item {
+            background: url("../img/icons/star-active.svg") 0 0 / toRem(20) no-repeat;
+          }
+        }
+      }
+    }
+  }
+  // .rating__item
+  &__item {
+    flex: 0 0 toRem(20);
+    width: toRem(20);
+    position: relative;
+    background: url("../img/icons/star.svg") 0 0 / toRem(20) no-repeat;
+    &.active {
+      background: url("../img/icons/star-active.svg") 0 0 / toRem(20) no-repeat;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: toRem(20);
+      background: url("../img/icons/star-active.svg") 0 0 / toRem(20) no-repeat;
+    }
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: toRem(7);
+        height: 100%;
+        transform: translateX(100%);
+      }
+    }
+    .rating--set & {
+      @media (any-hover: hover) {
+        &:hover {
+          ~ .rating__item {
+            background: url("../img/icons/star.svg") 0 0 / toRem(20) no-repeat;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  // .rating__input
+  &__input {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    opacity: 0;
+    .rating--set & {
+      cursor: pointer;
+    }
+  }
+}

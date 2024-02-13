@@ -48,7 +48,165 @@
          </div>
       </header>
       <main class="page">
+         <section class="page__catalog catalog">
+            <div class="catalog__container">
+               <aside class="catalog__filter filter">
+                  <h4 data-spoller="open" class="filter__title title-filter">
+                     <button type="button"
+                        class="title-filter__button title-filter__button--main _icon-filtter">Filter</button>
+                  </h4>
+                  <form action="#" class="filter__body">
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__body">
+                           <nav class="section-filter__menu menu-filter">
+                              <ul class="menu-filter__list">
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link active _icon-ch-right">Tops</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Printed T-shirts</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Plain T-shirts</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Kurti</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Boxers</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Full sleeve T-shirts</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Joggers</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Payjamas</a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link _icon-ch-right">Jeans</a>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <h5 data-spoller="open" class="section-filter__title title-filter">
+                           <button type="button" class="title-filter__button _icon-ch-down">Price</button>
+                        </h5>
+                        <div class="section-filter__body">
+                           <div class="section-filter__price price-filter">
+                              <div class="price-filter__range"></div>
+                              <div class="price-filter__inputs">
+                                 <input type="text" name="price-from"
+                                    class="price-filter__input price-filter__input--from">
+                                 <input type="text" name="price-to" class="price-filter__input price-filter__input--to">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <h5 data-spoller="open" class="section-filter__title title-filter">
+                           <button type="button" class="title-filter__button _icon-ch-down">Colors</button>
+                        </h5>
+                        <div class="section-filter__body">
+                           <div class="section-filter__colors colors-filter">
+                              <label class="colors-filter__item" style="--color: #8434e1">
+                                 <input type="checkbox" class="colors-filter__input" name="color[]">
+                                 Purple
+                              </label>
+                              <label class="colors-filter__item" style="--color: #000000">
+                                 <input type="checkbox" class="colors-filter__input" name="color[]">
+                                 Black
+                              </label>
+                              <label class="colors-filter__item" style="--color: #F35528">
+                                 <input type="checkbox" class="colors-filter__input" name="color[]">
+                                 Red
+                              </label>
+                              <label class="colors-filter__item" style="--color: #F16F2B">
+                                 <input type="checkbox" class="colors-filter__input" name="color[]">
+                                 Orange
+                              </label>
+                              <label class="colors-filter__item" style="--color: #345EFF">
+                                 <input type="checkbox" class="colors-filter__input" name="color[]">
+                                 Navy
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <h5 data-spoller="open" class="section-filter__title title-filter">
+                           <button type="button" class="title-filter__button _icon-ch-down">Size</button>
+                        </h5>
+                        <div class="section-filter__body">
+                           <div class="section-filter__size size-filter">
+                              <label class="size-filter__item">
+                                 <input type="checkbox" class="size-filter__input" name="size[]">
+                                 XXS
+                              </label>
+                              <label class="size-filter__item">
+                                 <input type="checkbox" class="size-filter__input" name="size[]">
+                                 XS
+                              </label>
+                              <label class="size-filter__item">
+                                 <input type="checkbox" class="size-filter__input" name="size[]">
+                                 S
+                              </label>
+                              <label class="size-filter__item">
+                                 <input type="checkbox" class="size-filter__input" name="size[]">
+                                 M
+                              </label>
+                              <label class="size-filter__item">
+                                 <input type="checkbox" class="size-filter__input" name="size[]">
+                                 L
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <h5 data-spoller="open" class="section-filter__title title-filter">
+                           <button type="button" class="title-filter__button _icon-ch-down">Dress Style</button>
+                        </h5>
+                        <div class="section-filter__body">
+                           <div class="section-filter__style style-filter">
+                              <label class="style-filter__item _icon-ch-right">
+                                 <input type="checkbox" class="style-filter__input" name="style[]">
+                                 Classic
+                              </label>
+                              <label class="style-filter__item _icon-ch-right">
+                                 <input type="checkbox" class="style-filter__input" name="style[]">
+                                 Casual
+                              </label>
+                              <label class="style-filter__item _icon-ch-right">
+                                 <input type="checkbox" class="style-filter__input" name="style[]">
+                                 Business
+                              </label>
+                              <label class="style-filter__item _icon-ch-right">
+                                 <input type="checkbox" class="style-filter__input" name="style[]">
+                                 Sport
+                              </label>
 
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </aside>
+               <div class="catalog__body">
+                  <div class="catalog__header">
+                     <h1 class="catalog__title">Women’s Clothing</h1>
+                     <ul class="catalog__type type-catalog">
+                        <li class="type-catalog__item">
+                           <button class="type-catalog__button type-catalog__button--active">New</button>
+                        </li>
+                        <li class="type-catalog__item">
+                           <button class="type-catalog__button">Recommended</button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
       <footer class="footer">
          <div class="footer__container">
@@ -175,8 +333,11 @@
          </div>
       </footer>
    </div>
-   <!-- Підключення слайдеру Swiper -->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Підключення noUiSlider -->
+   <script src="js/nouislider.min.js"></script>
+   <!-- Форматування -->
+   <script src="js/wNumb.min.js"></script>
    <!-- Підключення JS-файлу з кодом -->
    <script src="js/script.js"></script>
 </body>

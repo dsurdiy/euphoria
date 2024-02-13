@@ -69,7 +69,7 @@ const spollers = document.querySelectorAll("[data-spoller]");
 
 if (spollers.length) {
    spollers.forEach(spoller => {
-      spoller.nextElementSibling.hidden = true;
+      spoller.dataset.spoller !== "open" ? spoller.nextElementSibling.hidden = true : spoller.classList.add("active");
    })
 }
 
@@ -245,5 +245,43 @@ if (reviewsSlider) {
             spaceBetween: 23
          }
       },
+   });
+}
+
+// ===========
+// Filter
+// ===========
+
+// Price
+
+const filterRange = document.querySelector(".price-filter__range");
+if (filterRange) {
+   const filterRangeFrom = document.querySelector(".price-filter__input--from");
+   const filterRangeTo = document.querySelector(".price-filter__input--to");
+
+   noUiSlider.create(filterRange, {
+      start: [0, 100],
+      connect: true,
+      range: {
+         'min': 0,
+         'max': 100
+      },
+      format: wNumb({
+         decimals: 0,
+         thousand: '',
+         prefix: '$'
+      })
+   });
+
+   filterRange.noUiSlider.on('update', function (values, handle) {
+      filterRangeFrom.value = `${values[0]}`;
+      filterRangeTo.value = `${values[1]}`;
+   });
+
+   filterRangeFrom.addEventListener('change', function () {
+      filterRange.noUiSlider.setHandle(0, filterRangeFrom.value);
+   });
+   filterRangeTo.addEventListener('change', function () {
+      filterRange.noUiSlider.setHandle(1, filterRangeTo.value);
    });
 }

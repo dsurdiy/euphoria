@@ -1,0 +1,243 @@
+.filter {
+   border-right: toRem(1) solid #bebcbd;
+   // .filter__title
+   &__title {
+   }
+   // .filter__body
+   &__body {
+   }
+   // .filter__section
+   &__section {
+   }
+}
+
+.section-filter {
+   // .section-filter__body
+   &__body {
+      padding: toRem(35) toRem(30);
+      border-bottom: toRem(1) solid #bebcbd;
+   }
+   // .section-filter__menu
+   &__menu {
+   }
+   // .section-filter__title
+   &__title {
+   }
+   // .section-filter__price
+   &__price {
+   }
+   // .section-filter__colors
+   &__colors {
+   }
+   // .section-filter__size
+   &__size {
+   }
+   // .section-filter__style
+   &__style {
+   }
+}
+
+.menu-filter {
+   // .menu-filter__list
+   &__list {
+   }
+   // .menu-filter__item
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: toRem(18);
+      }
+   }
+   // .menu-filter__link
+   &__link {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: toRem(10);
+      color: #8a8989;
+      font-weight: 600;
+      line-height: 118.75%; /* 19/16 */
+      transition: color 0.3s;
+      &.active {
+         color: $purpleColor;
+      }
+      &::before {
+         font-size: toRem(22);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkColor;
+         }
+      }
+   }
+}
+
+.price-filter {
+   // .price-filter__range
+   &__range {
+      &:not(:last-child) {
+         margin-bottom: toRem(32);
+      }
+   }
+   // .price-filter__inputs
+   &__inputs {
+      display: flex;
+      gap: toRem(30);
+   }
+   // .price-filter__input
+   &__input {
+      height: toRem(30);
+      text-align: center;
+      border-radius: toRem(8);
+      border: toRem(1) solid #bebcbd;
+      color: $darkColor;
+      font-weight: 500;
+   }
+}
+
+.title-filter {
+   &.active {
+      .title-filter__button:not(.title-filter__button--main)::before {
+         transform: rotate(-180deg);
+      }
+   }
+   // .title-filter__button
+   &__button {
+      border-bottom: toRem(1) solid #bebcbd;
+      padding: toRem(20) toRem(30);
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(15);
+      font-size: toRem(22);
+      font-weight: 600;
+      transition: color 0.3s;
+      &::before {
+         transition: transform 0.3s;
+      }
+   }
+   @media (any-hover: hover) {
+      &:hover {
+         color: $darkColor;
+      }
+   }
+}
+
+.colors-filter {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: toRem(18);
+   // .colors-filter__item
+   &__item {
+      display: grid;
+      gap: toRem(18);
+      color: #8a8989;
+      font-weight: 600;
+      text-align: center;
+      justify-items: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      &::before {
+         content: "";
+         border-radius: toRem(12);
+         width: toRem(37);
+         aspect-ratio: 1 / 1;
+         background-color: var(--color);
+         transition: all 0.3s;
+      }
+      &:has(input:focus-visible) {
+         outline: toRem(2) solid #000;
+         border-radius: toRem(2);
+      }
+      &:has(input:checked) {
+         color: #000;
+         transform: scale(0.9);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+            &::before {
+               transform: scale(1.05);
+            }
+         }
+      }
+   }
+   // .colors-filter__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+}
+
+.size-filter {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: toRem(20);
+   text-align: center;
+   // .size-filter__item
+   &__item {
+      font-weight: 600;
+      border-radius: toRem(8);
+      border: toRem(1) solid #bebcbd;
+      padding: toRem(7);
+      cursor: pointer;
+      color: $darkColor;
+      font-size: toRem(14);
+      text-transform: uppercase;
+      transition: all 0.3s;
+      &:has(input:focus-visible) {
+         outline: toRem(2) solid #000;
+         border-radius: toRem(2);
+      }
+      &:has(input:checked) {
+         background-color: #000;
+         color: #fff;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #000;
+            color: #fff;
+         }
+      }
+   }
+   // .size-filter__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+}
+
+.style-filter {
+   // .style-filter__item
+   &__item {
+      @extend .menu-filter__link;
+      cursor: pointer;
+      &:not(:last-child) {
+         margin-bottom: toRem(18);
+      }
+      &:has(input:focus-visible) {
+         outline: toRem(2) solid #000;
+         border-radius: toRem(2);
+      }
+      &:has(input:checked) {
+         color: $purpleColor;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $purpleColor;
+         }
+      }
+   }
+   // .style-filter__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+}

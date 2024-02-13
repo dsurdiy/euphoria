@@ -31,6 +31,10 @@ $litecolor: #f6f6f6;
 @import "common";
 @import "header";
 @import "footer";
+@import "filter";
+@import "nouislider";
+// Сторінки
+@import "catalog";
 
 body {
 	font-family: "Causten";
@@ -92,6 +96,9 @@ body {
 	// .page__reviews
 	&__reviews {
 		@include adaptiveValue("margin-bottom", 100, 40);
+	}
+	// .page__catalog
+	&__catalog {
 	}
 }
 

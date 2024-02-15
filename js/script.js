@@ -285,3 +285,51 @@ if (filterRange) {
       filterRange.noUiSlider.setHandle(1, filterRangeTo.value);
    });
 }
+
+// Catalog
+// Отримання масиву продуктів з бази даних (json файлу)
+
+const catalogItems = document.querySelector(".catalog__items");
+if (catalogItems) {
+   loadProducts();
+}
+
+async function loadProducts() {
+   const response = await fetch("json/products.json", {
+      method: "GET"
+   });
+   if (response.ok) {
+      const responseData = await response.json();
+      initProducts(responseData);
+   } else {
+      alert("Error!");
+   }
+}
+
+function initProducts(data) {
+   const productsList = data.products;
+
+   if (productsList.length) {
+      let productTemplate = ``;
+      productsList.forEach(productItem => {
+         productTemplate += `<article class="item-product">`;
+         productTemplate += `<a href="#" class="item-product__favourite ${productItem.favorite ? "item-product__favourite--active" : null} _icon-heart"></a>`;
+         if (productItem.image) {
+            productTemplate += `<a href="${productItem.url}" class="item-product__picture-link">`;
+            productTemplate += `<img class="item-product__image" src="${productItem.image}" alt="Image">`;
+            productTemplate += `</a>`;
+         }
+         productTemplate += `<div class="item-product__body">`;
+         productTemplate += `<h4 class="item-product__title">`;
+         productTemplate += `<a href="${productItem.url}" class="item-product__link-title">${productItem.title}</a>`;
+         productTemplate += `</h4>`;
+         if (productItem.label) {
+            productTemplate += `<div class="item-product__label">${productItem.label}</div>`;
+         }
+         productTemplate += `<div class="item-product__price">${productItem.price}</div>`;
+         productTemplate += `</div>`;
+         productTemplate += `</article>`;
+      });
+      catalogItems.innerHTML = productTemplate;
+   }
+}

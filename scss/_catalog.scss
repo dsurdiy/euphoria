@@ -32,6 +32,13 @@
    // .catalog__type
    &__type {
    }
+   // .catalog__items
+   &__items {
+      display: grid;
+      column-gap: toRem(24);
+      @include adaptiveValue("row-gap", 50, 24);
+      grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+   }
 }
 
 .type-catalog {

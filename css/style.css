@@ -476,6 +476,9 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.item-product__favourite--active {
+  color: red;
+}
 .item-product__favourite::before {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -2339,6 +2342,36 @@ textarea {
   font-size: 1.375rem;
   font-weight: 600;
 }
+.catalog__items {
+  display: grid;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+}
+@media (min-width: 79.375em) {
+  .catalog__items {
+    row-gap: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (row-gap: clamp( 1.5rem , 0.9526315789rem  +  2.7368421053vw , 3.125rem )) {
+    .catalog__items {
+      row-gap: clamp( 1.5rem , 0.9526315789rem  +  2.7368421053vw , 3.125rem );
+    }
+  }
+  @supports not (row-gap: clamp( 1.5rem , 0.9526315789rem  +  2.7368421053vw , 3.125rem )) {
+    .catalog__items {
+      row-gap: calc(1.5rem + 1.625 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .catalog__items {
+    row-gap: 1.5rem;
+  }
+}
+
 .type-catalog {
   display: -webkit-box;
   display: -ms-flexbox;

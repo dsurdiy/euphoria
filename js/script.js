@@ -71,6 +71,23 @@ if (spollers.length) {
    spollers.forEach(spoller => {
       spoller.dataset.spoller !== "open" ? spoller.nextElementSibling.hidden = true : spoller.classList.add("active");
    })
+   // Filter
+   const filterTitle = document.querySelector(".filter__title");
+   if (filterTitle) {
+      // window.addEventListener("resize", someFunc);
+      const breakPoint = `(max-width:991.98px)`;
+      const matchMedia = window.matchMedia(breakPoint);
+      matchMedia.addEventListener("change", (e) => {
+         const isTrue = e.matches;
+         if (isTrue) {
+            slideUp(filterTitle.nextElementSibling);
+            filterTitle.classList.remove("active");
+         } else {
+            slideDown(filterTitle.nextElementSibling);
+            filterTitle.classList.add("active");
+         }
+      });
+   }
 }
 
 // Плавна поява спойлера:

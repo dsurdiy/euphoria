@@ -35,6 +35,78 @@
          "title": "Black Shorts",
          "label": "Explore Now!",
          "price": "$19.00"
+      },
+      {
+         "id": 5,
+         "favorite": true,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-01.webp",
+         "title": "Shirts",
+         "label": "Explore Now!",
+         "price": "$38.00"
+      },
+      {
+         "id": 6,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-02.webp",
+         "title": "White T-shirt",
+         "label": "Explore Now!",
+         "price": "$11.00"
+      },
+      {
+         "id": 7,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-03.webp",
+         "title": "Levender Hoodie",
+         "label": "Explore Now!",
+         "price": "$119.00"
+      },
+      {
+         "id": 8,
+         "favorite": true,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-04.webp",
+         "title": "Black Shorts",
+         "label": "Explore Now!",
+         "price": "$19.00"
+      },
+      {
+         "id": 9,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-01.webp",
+         "title": "Shirts",
+         "label": "Explore Now!",
+         "price": "$38.00"
+      },
+      {
+         "id": 10,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-02.webp",
+         "title": "White T-shirt",
+         "label": "Explore Now!",
+         "price": "$11.00"
+      },
+      {
+         "id": 11,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-01.webp",
+         "title": "Shirts",
+         "label": "Explore Now!",
+         "price": "$38.00"
+      },
+      {
+         "id": 12,
+         "favorite": false,
+         "url": "product.html",
+         "image": "img/modules/for-women/woman-02.webp",
+         "title": "White T-shirt",
+         "label": "Explore Now!",
+         "price": "$11.00"
       }
    ]
 }

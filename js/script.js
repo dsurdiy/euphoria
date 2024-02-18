@@ -265,6 +265,67 @@ if (reviewsSlider) {
    });
 }
 
+const mainProduct = document.querySelector(".main-product");
+if (mainProduct) {
+   const mainProductSliderImages = document.querySelectorAll(".main-product__slider img");
+   let mainProductThumbSlider;
+
+   if (mainProductSliderImages.length) {
+      const mainProductBlock = document.querySelector(".main-product__images");
+      let mainProductThumbSliderTemplate = `<div class="main-product__thumb-slider thumb-slider">`;
+      mainProductThumbSliderTemplate += `<div class="thumb-slider__slider swiper">`;
+      mainProductThumbSliderTemplate += `<div class="thumb-slider__wrapper swiper-wrapper">`;
+
+      mainProductSliderImages.forEach(mainProductSliderImage => {
+         const srcImage = mainProductSliderImage.getAttribute("src").replace("/slider/", "/slider/thumbs/");
+         mainProductThumbSliderTemplate += `<div class="thumb-slider__slide swiper-slide">
+            <img src="${srcImage}" class="thumb-slider__image" alt="Image">
+         </div>`;
+      });
+
+      mainProductThumbSliderTemplate += `</div>`;
+      mainProductThumbSliderTemplate += `</div>`;
+      mainProductThumbSliderTemplate += `<div class="thumb-slider__arrows">`;
+      mainProductThumbSliderTemplate += `
+         <button type="button" class="thumb-slider__arrow thumb-slider__arrow--up _icon-ch-up"></button>
+         <button type="button" class="thumb-slider__arrow thumb-slider__arrow--down _icon-ch-down"></button>
+      `;
+      mainProductThumbSliderTemplate += `</div>`;
+      mainProductThumbSliderTemplate += `</div>`;
+
+      mainProductBlock.insertAdjacentHTML("afterbegin", mainProductThumbSliderTemplate);
+
+      mainProductThumbSlider = new Swiper('.thumb-slider__slider', {
+         // Optional parameters
+         loop: true,
+         direction: "vertical",
+         speed: 800,
+         spaceBetween: 20,
+         slidesPerView: 3,
+      });
+   }
+
+   const mainProductSlider = new Swiper('.main-product__slider', {
+      // Optional parameters
+      loop: true,
+      speed: 800,
+      spaceBetween: 0,
+      slidesPerView: 1,
+      // Navigation arrows
+      navigation: {
+         nextEl: '.thumb-slider__arrow--down',
+         prevEl: '.thumb-slider__arrow--up',
+      },
+
+      // Звʼязуємо слайдери:
+      thumbs: {
+         swiper: mainProductThumbSlider
+      }
+   });
+
+
+}
+
 // ===========
 // Filter
 // ===========

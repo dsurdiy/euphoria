@@ -33,8 +33,6 @@ $litecolor: #f6f6f6;
 @import "footer";
 @import "filter";
 @import "nouislider";
-// Сторінки
-@import "catalog";
 
 body {
 	font-family: "Causten";
@@ -100,7 +98,12 @@ body {
 	// .page__catalog
 	&__catalog {
 	}
+	// .page__product
+	&__product {
+	}
 }
 
 // Сторінки
 @import "home";
+@import "catalog";
+@import "product";

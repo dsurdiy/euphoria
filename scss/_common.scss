@@ -326,7 +326,7 @@
         color: $darkColor;
       }
     }
-    &.active {
+    .active & {
       font-weight: 500;
       color: $darkColor;
       &::before {

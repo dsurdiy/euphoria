@@ -7,6 +7,10 @@
    &__description {
       @include adaptiveValue("margin-bottom", 100, 40);
    }
+   // .product__products
+   &__products {
+      @include adaptiveValue("margin-bottom", 100, 40);
+   }
 }
 
 .main-product {
@@ -359,6 +363,15 @@
 .description {
    // .description__container
    &__container {
+   }
+   // .description__title
+   &__title {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 30, 20);
+      }
+   }
+   // .description__body
+   &__body {
       @media (min-width: toEm(991.98)) {
          display: flex;
          align-items: flex-start;

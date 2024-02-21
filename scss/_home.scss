@@ -648,6 +648,9 @@
    }
    // .products__title
    &__title {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 30, 20);
+      }
    }
    // .products__items
    &__items {
